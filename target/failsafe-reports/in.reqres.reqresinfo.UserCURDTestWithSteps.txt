@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------
+Test set: in.reqres.reqresinfo.UserCURDTestWithSteps
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 13.514 sec <<< FAILURE! - in in.reqres.reqresinfo.UserCURDTestWithSteps
+test002(in.reqres.reqresinfo.UserCURDTestWithSteps)  Time elapsed: 0.274 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: map containing [ANYTHING->"Tom8839"]
+     but: map was [<data={last_name=Morris, id=5, avatar=https://reqres.in/img/faces/5-image.jpg, first_name=Charles, email=charles.morris@reqres.in}>, <support={text=To keep ReqRes free, contributions towards server costs are appreciated!, url=https://reqres.in/#support-heading}>]
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at in.reqres.reqresinfo.UserCURDTestWithSteps.test002(UserCURDTestWithSteps.java:45)
+
+test003(in.reqres.reqresinfo.UserCURDTestWithSteps)  Time elapsed: 0.206 sec  <<< FAILURE!
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:636)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:122)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:130)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)
+	at in.reqres.reqresinfo.UsersSteps.loginUser(UsersSteps.java:59)
+	at in.reqres.reqresinfo.UserCURDTestWithSteps.test003(UserCURDTestWithSteps.java:52)
+
+test009(in.reqres.reqresinfo.UserCURDTestWithSteps)  Time elapsed: 0.173 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<12> but was:<8>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at in.reqres.reqresinfo.UserCURDTestWithSteps.test009(UserCURDTestWithSteps.java:102)
+
+test010(in.reqres.reqresinfo.UserCURDTestWithSteps)  Time elapsed: 0.174 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[Reena]> but was:<[Byron]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at in.reqres.reqresinfo.UserCURDTestWithSteps.test010(UserCURDTestWithSteps.java:110)
+
